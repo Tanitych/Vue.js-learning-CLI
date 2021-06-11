@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/header-img/icons/favicon.png" />
+    <link rel="stylesheet" href="lips/fontawesome/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      h4 {
+        font-weight: bold;
+      }
+      li {
+        margin: 0px 0px 15px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- @import "header.html" -->
+    <div class="content">
+      <ul id="result"></ul>
+      <div class="scroll_el anim_items">SCROLL EL</div>
+    </div>
+    <!-- @import "footer.html" -->
+
+    <script>
+      const data = [
+        {
+          id: 1,
+          name: "Tanita",
+          job: "Dev",
+          age: 24,
+        },
+        {
+          id: 2,
+          name: "Ira",
+          job: "Lashmaker",
+          age: 28,
+        },
+        {
+          id: 3,
+          name: "Vlada",
+          job: "teacher",
+          age: 25,
+        },
+      ];
+
+      const result = document.querySelector("#result");
+
+      for (let i = 0; i < data.length; i++) {
+        result.innerHTML += `<li>
+        <h4>${data[i].name}</h4>
+        <p>${data[i].id}</p>
+        <p>${data[i].job}</p>
+        <p>${data[i].age}</p>
+        </li>`;
+      }
+    </script>
+    <script src="js/jq/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
