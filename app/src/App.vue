@@ -14,7 +14,7 @@
         class="search"
         type="search"
         v-model="search"
-        placeholder="Search some..."
+        placeholder="Search something..."
       />
       <ul>
         <li v-for="item in data" :key="item.id">
