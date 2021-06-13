@@ -1,3 +1,5 @@
+"use strict"
+
 const animItems = document.querySelectorAll('.anim_items');
 
 if (animItems.length > 0) {
@@ -61,3 +63,67 @@ if (animItems.length > 0) {
 // }
 // doHomework('math', alertFinished)
 
+//cicles
+const data = [
+    {
+        id: 1,
+        name: "Tanita",
+        job: "Dev",
+        age: 24,
+    },
+    {
+        id: 2,
+        name: "Ira",
+        job: "Lashmaker",
+        age: 28,
+    },
+    {
+        id: 3,
+        name: "Vlada",
+        job: "teacher",
+        age: 25,
+    },
+];
+
+const result = document.querySelector("#result");
+
+for (let i = 0; i < data.length; i++) {
+    result.innerHTML += `<li>
+    <h4>${data[i].name}</h4>
+    <p>${data[i].id}</p>
+    <p>${data[i].job}</p>
+    <p>${data[i].age}</p>
+    </li>`;
+}
+
+//filter()
+const filterArr = [
+    {
+        id: 1,
+        name: "Tanita",
+        job: "Dev",
+        age: 24,
+    },
+    {
+        id: 2,
+        name: "Ira",
+        job: "Lashmaker",
+        age: 28,
+    },
+    {
+        id: 3,
+        name: "Vlada",
+        job: "teacher",
+        age: 25,
+    },
+];
+
+const filtered = filterArr.filter(value => {
+    return value.age > 24;
+});
+
+const filteredEl = document.getElementsByClassName('filteredEl')[0];
+
+for (let i = 0; i < filterArr.length; i++) {
+    filteredEl.innerHTML += `<li>${filtered[i].name} - ${filtered[i].age}</li>`;
+};

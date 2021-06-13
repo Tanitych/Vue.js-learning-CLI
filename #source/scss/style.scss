@@ -96,7 +96,7 @@ h6 {
   transform: translate(-70%, 0);
   transition: all ease 0.8s;
   opacity: 0;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 .scroll_el.active {

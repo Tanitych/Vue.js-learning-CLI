@@ -10,7 +10,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/style.css" />
     <style>
       h4 {
@@ -25,45 +24,13 @@
     
     <div class="content">
       <ul id="result"></ul>
+      <ul style="margin-top: 30px" class="filteredEl"></ul>
       <div class="scroll_el anim_items">SCROLL EL</div>
     </div>
     
 
-    <script>
-      const data = [
-        {
-          id: 1,
-          name: "Tanita",
-          job: "Dev",
-          age: 24,
-        },
-        {
-          id: 2,
-          name: "Ira",
-          job: "Lashmaker",
-          age: 28,
-        },
-        {
-          id: 3,
-          name: "Vlada",
-          job: "teacher",
-          age: 25,
-        },
-      ];
-
-      const result = document.querySelector("#result");
-
-      for (let i = 0; i < data.length; i++) {
-        result.innerHTML += `<li>
-        <h4>${data[i].name}</h4>
-        <p>${data[i].id}</p>
-        <p>${data[i].job}</p>
-        <p>${data[i].age}</p>
-        </li>`;
-      }
-    </script>
+    <script></script>
     <script src="js/jq/jquery.js"></script>
-    <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
