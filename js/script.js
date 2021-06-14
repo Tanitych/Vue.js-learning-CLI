@@ -118,7 +118,7 @@ const filterArr = [
     },
 ];
 
-const filtered = filterArr.filter(value => {
+const filtered = filterArr.filter(function (value) {
     return value.age > 24;
 });
 

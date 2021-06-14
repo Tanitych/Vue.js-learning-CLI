@@ -10,41 +10,37 @@
       <h1>Live Search Vue</h1>
     </div>
     <div class="content">
-      <input
-        class="search"
-        type="search"
-        v-model="search"
-        placeholder="Search something..."
-      />
-      <ul>
-        <li v-for="item in data" :key="item.id">
-          <p>name: {{ item.name }}</p>
-          <p>
-            <span>{{ item.age }}</span>
-          </p>
-        </li>
+      <input type="search" v-model="search" placeholder="Search some..." />
+      <ul v-for="person in searchHandler" :key="person">
+        <p>name: {{ person.name }}</p>
+        <p>age: {{ person.age }}</p>
+        <p>ability: {{ person.ability }}</p>
       </ul>
     </div>
   </div>
 </template>
 <script>
 import { persons } from "./data/data";
-
 export default {
   name: "App",
   data() {
     return {
-      data: [],
       search: "",
+      data: [],
     };
   },
   created() {
     this.data = persons;
+    console.log(this.data);
   },
   computed: {
     searchHandler() {
-      return this.data.filter((elem) => {
-        return elem.name.toLowerCase().includes(this.search.toLowerCase());
+      return this.data.filter((element) => {
+        return (
+          element.name.toLowerCase().includes(this.search.toLowerCase()) ||
+          element.ability.toLowerCase().includes(this.search.toLowerCase()) ||
+          ("" + element.age).includes(this.search.toLowerCase())
+        );
       });
     },
   },
@@ -68,6 +64,7 @@ export default {
 input {
   font-size: 17px;
   padding: 10px 10px;
+  margin: 0px 0px 10px 0px;
 }
 li {
   margin: 0px 0px 13px 0px;

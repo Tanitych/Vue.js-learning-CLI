@@ -2,26 +2,26 @@ export const persons = [
     {
         name: "Tanita",
         age: 24,
-        title: "Dev",
+        ability: "Dev",
     },
     {
         name: "Zhenya",
         age: 22,
-        title: "Businessman",
+        ability: "businessman",
     },
     {
         name: "Irisha",
         age: 28,
-        title: "Lash master",
+        ability: "lash master",
     },
     {
         name: "Vlada",
         age: 25,
-        title: "teacher",
+        ability: "teacher",
     },
     {
         name: "Nastya",
         age: 26,
-        title: "doctor",
+        ability: "doctor",
     }
 ]
