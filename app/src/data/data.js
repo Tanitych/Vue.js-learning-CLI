@@ -2,7 +2,7 @@ export const persons = [
     {
         name: "Tanita",
         age: 24,
-        ability: "Dev",
+        ability: "V-dev",
     },
     {
         name: "Zhenya",

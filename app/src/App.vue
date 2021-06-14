@@ -12,13 +12,12 @@
     <div class="content">
       <input type="search" v-model="search" placeholder="Search some..." />
       <ul v-for="person in searchHandler" :key="person">
-        <p>name: {{ person.name }}</p>
-        <p>age: {{ person.age }}</p>
-        <p>ability: {{ person.ability }}</p>
+        <p>{{ person.name }} - {{ person.age }} - {{ person.ability }}</p>
       </ul>
     </div>
   </div>
 </template>
+
 <script>
 import { persons } from "./data/data";
 export default {
@@ -29,20 +28,19 @@ export default {
       data: [],
     };
   },
-  created() {
-    this.data = persons;
-    console.log(this.data);
-  },
   computed: {
     searchHandler() {
       return this.data.filter((element) => {
         return (
           element.name.toLowerCase().includes(this.search.toLowerCase()) ||
-          element.ability.toLowerCase().includes(this.search.toLowerCase()) ||
-          ("" + element.age).includes(this.search.toLowerCase())
+          ("" + element.age).includes(this.search) ||
+          element.ability.toLowerCase().includes(this.search.toLowerCase())
         );
       });
     },
+  },
+  created() {
+    this.data = persons;
   },
 };
 </script>
@@ -65,6 +63,9 @@ input {
   font-size: 17px;
   padding: 10px 10px;
   margin: 0px 0px 10px 0px;
+}
+ul {
+  padding: 0px 0px;
 }
 li {
   margin: 0px 0px 13px 0px;
