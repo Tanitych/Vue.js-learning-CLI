@@ -8,39 +8,43 @@
       <h1>V-for</h1>
       <h1>Conditions</h1>
       <h1>Live Search Vue</h1>
+      <h1>Components</h1>
     </div>
     <div class="content">
-      <input type="search" v-model="search" placeholder="Search some..." />
-      <ul v-for="person in searchHandler" :key="person">
-        <p>{{ person.name }} - {{ person.age }} - {{ person.ability }}</p>
-      </ul>
+      <p
+        style="
+          margin-bottom: 15px;
+          font-weight: bold;
+          font-size: 20px;
+          text-align: center;
+        "
+      >
+        {{ title }}
+        <Posts :data="posts" />
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-import { persons } from "./data/data";
+//data
+import { postsData } from "./views/utils/dummy.data";
+
+//coponents
+import Posts from "./components/Posts.vue";
+
 export default {
-  name: "App",
+  components: {
+    Posts,
+  },
   data() {
     return {
-      search: "",
-      data: [],
+      title: "News",
+      posts: [],
     };
   },
-  computed: {
-    searchHandler() {
-      return this.data.filter((element) => {
-        return (
-          element.name.toLowerCase().includes(this.search.toLowerCase()) ||
-          ("" + element.age).includes(this.search) ||
-          element.ability.toLowerCase().includes(this.search.toLowerCase())
-        );
-      });
-    },
-  },
   created() {
-    this.data = persons;
+    this.posts = postsData;
   },
 };
 </script>
@@ -89,5 +93,6 @@ h4 {
 }
 p {
   margin: 0px 0px 0px 0px;
+  text-align: left;
 }
 </style>

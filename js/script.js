@@ -127,3 +127,28 @@ const filteredEl = document.getElementsByClassName('filteredEl')[0];
 for (let i = 0; i < filterArr.length; i++) {
     filteredEl.innerHTML += `<li>${filtered[i].name} - ${filtered[i].age}</li>`;
 };
+
+//switch
+      // let num = 1;
+      // if (num == 1) {
+      //   name = "Tanita";
+      //   console.log(name);
+      // } else {
+      //   name = "отсутствует";
+      //   console.log(name);
+      // }
+
+      // let number = +prompt("Введите число между 0 и 3");
+
+      // switch (number) {
+      //   case 0:
+      //     alert("Vveli 0");
+      //     break;
+      //   case 1:
+      //     alert("Vveli 1");
+      //     break;
+      //   case 2:
+      //   case 3:
+      //     alert("Vveli 2 ili 3");
+      //     break;
+      // }
