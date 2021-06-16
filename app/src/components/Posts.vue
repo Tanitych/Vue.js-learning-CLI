@@ -1,20 +1,15 @@
 <template>
   <div>
-    <div v-for="post in data" :key="post.id">
-      <h1 style="text-align: left">{{ post.title }}</h1>
-      <p style="font-weight: normal">Статья: {{ post.id }} - {{ post.desc }}</p>
+    <div v-for="item in posts" :key="item">
+      <p style="margin-bottom: 15px">
+        {{ item.id }} - {{ item.title }} - {{ item.desc }}
+      </p>
       <hr />
     </div>
+    <h2>Hiiii</h2>
   </div>
 </template>
 
 <script>
-export default {
-  props: {
-    data: {
-      type: [Array, Object],
-      required: true,
-    },
-  },
-};
+export default {};
 </script>

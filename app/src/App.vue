@@ -20,7 +20,7 @@
         "
       >
         {{ title }}
-        <Posts :data="posts" />
+        <posts />
       </p>
     </div>
   </div>
@@ -31,17 +31,16 @@
 import { postsData } from "./views/utils/dummy.data";
 
 //coponents
-import Posts from "./components/Posts.vue";
-
+import posts from "./components/Posts.vue";
 export default {
-  components: {
-    Posts,
-  },
   data() {
     return {
       title: "News",
       posts: [],
     };
+  },
+  components: {
+    posts,
   },
   created() {
     this.posts = postsData;
