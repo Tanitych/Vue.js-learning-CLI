@@ -9,6 +9,7 @@
       <h1>Conditions</h1>
       <h1>Live Search Vue</h1>
       <h1>Components</h1>
+      <h1>Vue filters</h1>
     </div>
     <div class="content">
       <p
@@ -20,7 +21,7 @@
         "
       >
         {{ title }}
-        <posts />
+        <posts :data="posts" />
       </p>
     </div>
   </div>
@@ -48,50 +49,11 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.content {
-  margin: 0 auto;
-  max-width: 1170px;
-  padding: 20px 10px 0px 10px;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 20px;
-}
-input {
-  font-size: 17px;
-  padding: 10px 10px;
-  margin: 0px 0px 10px 0px;
-}
-ul {
-  padding: 0px 0px;
-}
-li {
-  margin: 0px 0px 13px 0px;
-  width: fit-content;
-  text-align: left;
-  list-style-type: none;
-}
-body {
-  font-size: 18px;
-}
-button {
-  margin: 0px 10px;
-}
-h1 {
-  font-size: 18px;
-  margin: 0px 0px 5px 0px;
-}
-h4 {
-  margin: 0px 0px 0px 0px;
-  text-align: left;
-}
-p {
-  margin: 0px 0px 0px 0px;
-  text-align: left;
-}
+
+  
+
+
+
+<style >
+/* @import "../../css/style.css"; */
 </style>
