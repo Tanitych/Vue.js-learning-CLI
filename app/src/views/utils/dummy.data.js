@@ -20,3 +20,15 @@ export const postsData = [
         desc: 'Эта модель часто используется не только в создании текста, но и при создании любого маркетингового инструмента.',
     },
 ]
+
+export const lessonsTitle = [
+    { title: "Methods" },
+    { title: "Computed" },
+    { title: "Watch" },
+    { title: "Life cycle hooks" },
+    { title: "V-for" },
+    { title: "Conditions" },
+    { title: "Live Search Vue" },
+    { title: "Components" },
+    { title: "Vue filters" },
+]

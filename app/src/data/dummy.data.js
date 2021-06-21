@@ -18,3 +18,4 @@ export const data = [
         age: 25,
     },
 ];
+
