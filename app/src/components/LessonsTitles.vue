@@ -1,23 +1,11 @@
 <template>
-  <div>
-    <div
-      v-for="item in lessonsTitle"
-      :key="item"
-      style="text-align: center; font-size: 20px; padding: 5px 0px"
-      class="titles"
-    >
-      <h1>{{ item.title }}</h1>
-    </div>
+  <div class="topics">
+    <h1 v-for="item in topicProps" :key="item">{{ item.title }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    lessonsTitles: {
-      type: [Array],
-      required: true,
-    },
-  },
+  props: ["topicProps"],
 };
 </script>

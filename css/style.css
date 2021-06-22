@@ -32,7 +32,7 @@ body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 14px;
+  font-size: 18px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -80,7 +80,7 @@ h6 {
 .content {
   margin: 0 auto;
   max-width: 1170px;
-  padding: 50px 0px;
+  padding: 35px 0px;
   height: 1000px; }
 
 .scroll_el {
@@ -105,3 +105,27 @@ h6 {
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
   opacity: 1; }
+
+.texts_block {
+  margin: 0px 0px 30px 0px; }
+
+.topics {
+  margin: 0px 0px 5px 0px;
+  text-align: center; }
+
+.texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.texts p {
+  margin: 0px 15px 10px 0px; }
+
+.nowrap {
+  white-space: nowrap; }
+
+h1 {
+  margin: 0px 0px 2px 0px; }
+
+.numbers {
+  margin: 0px 0px 7px 0px; }
